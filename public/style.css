@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), rgba(255,255,255,0.6) url('img/1511-large.jpg');
+    background-size: cover;
+  }
+
+  .main {
+    flex: 1 0 auto;
+    padding-top:5%;
+    /*padding-bototm:5%;*/
+  }
+
+  .collapsible-header {
+    line-height:1.6em;
+  }
+
+nav {
+  background: transparent;
+  box-shadow: none !important;
+}
+
+.nav-wrapper, i, a.brand-logo {
+  color: #333;
+
+}
+nav li a {
+  color: #333;
+  font-weight:500;
+  font-size:14pt;
+  text-transform: uppercase;
+}
+
+.page-footer {
+    background: #990000;
+  }
+
+  header {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), rgba(255,255,255,0.7) url('img/feet.png') center center;
+    background-size: cover;
+    height:225px;
+    display:block;
+    /*padding-top:90px;*/
+    text-transform: uppercase;
+    border-bottom:5px solid maroon;
+
+  }
+
+  .pre-hero h5 {
+    font-size:2em;
+    font-weight:bold;
+    color: #333;
+  }
+
+footer {
+  margin-top:5%;
+}
