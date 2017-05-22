@@ -1,119 +1,100 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html ng-app="app">
+
+<head>
     <meta charset="utf-8">
     <title>Premier Track Club | Dallas, TX</title>
     <!-- Compiled and minified CSS -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 
-  </head>
-  <body>
+</head>
+
+<body ng-controller="mainCtrl">
     <nav>
-    <div class="nav-wrapper container">
-      <a href="#!" class="brand-logo">
-        <img src="img/premier-track-logo-3.png" height="50" alt="">
-      </a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Spirit</a></li>
+        <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo center">
+                <img src="img/premier-track-logo-3.png" height="50" alt="">
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Spirit</a></li>
+            </ul>
+            <ul class="right">
+
+                <div class="chip">
+
+                    Login / Sign Up
+
+                </div>
+
+                <div>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="sass.html">About</a></li>
+                        <li><a href="badges.html">Join</a></li>
+                        <li><a href="collapsible.html">Spirit</a></li>
+                        <li><a href="mobile.html">Login</a></li>
+                    </ul>
+                </div>
+    </nav>
+
+    <ui-view></ui-view>
 
 
-
-
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">About</a></li>
-        <li><a href="badges.html">Join</a></li>
-        <li><a href="collapsible.html">Spirit</a></li>
-        <li><a href="mobile.html">Login</a></li>
-      </ul>
-    </div>
-  </nav>
-    <header>
-
-    </header>
-
-    <div class="pre-hero">
-        <!-- <h5 class="center-align">youth developmental track & field</h5> -->
-    </div>
-    <div class="container main">
-      <div class="row">
-        <div class="col m8 s12 card">
-          <div class="card-content">
-            <p class="flow-text">Premier Track Club is a competitive track and field club that participates in USA Track & Field, AAU, and TAAF track events at various locations within the Dallas / Fort Worth Metroplex. We accept male and female applicants between the ages of eight and nineteen and we encourage parental participation.</p>
-
-            <p style="margin-top:35px; line-height:1.6;">Although we are a competitive club, we accept all athletes and do not reject applicates based on performance or ability. We emphasize a solid, technical education in proper running technique for each race distance and build on these mechanics throughout the program's duration. Premier Track Club has competed in Dallas over the past ten years and we look forward to working with you and your athlete as we have fun breaking old and setting new personal records.</p>
-            <a class="waves-effect waves-light btn" style="margin-top:35px;margin-bottom:35px;">Read More</a>
-          </div>
-
-        </div>
-        <div class="col m4 s12">
-
-          <ul class="collapsible" data-collapsible="accordion" style="background-color:white;">
-            <li class="collection-header" style="border-bottom: 1px solid #ccc;"><h4 class="center-align">Schedule</h4></li>
-            <li>
-              <div class="collapsible-header">Thursday, May 25<br>Meet at NCAA West Regionals</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header">May 29 - Practice </div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header">June 3 - Meet</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-      <!-- <h1>Premier Track Club</h1> -->
-
-
-    </div>
     <footer class="page-footer">
-          <div class="container">
+        <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Premier Track Club</h5>
+                    <p class="grey-text text-lighten-4">"To give anything less than your best, is to sacrifice the gift." - Steve Prefontaine</p>
+                    <div class="social-menu">
+                        <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                        <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                        <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Navigate</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Join</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Spirit</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright">
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-            © 2017  Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2017 Copyright Premier Track Club
+                <small><a class="grey-text text-lighten-4 right" href="mailto:vernonmu@gmail.com">webmaster help</a></small>
             </div>
-          </div>
-        </footer>
-
-
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js" charset="utf-8"></script>
+
+
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/mainCtrl.js" charset="utf-8"></script>
+    <script src="./js/mainSrv.js" charset="utf-8"></script>
+
+
+
     <script type="javascript">
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
-    });
+        $(document).ready(function(){ $('.collapsible').collapsible(); });
     </script>
-  </body>
+</body>
+
 </html>

@@ -18,11 +18,16 @@ body {
 
 nav {
   background: white;
-  /*box-shadow: none !important;*/
+
 }
 
 .nav-wrapper, i, a.brand-logo {
   color: #333;
+}
+
+.schedule-title {
+  font-size:1.25em;
+  /*font-size:bold;*/
 }
 
 a.brand-logo {
@@ -39,8 +44,17 @@ nav li a {
     background: #990000;
   }
 
+.chip:hover {
+    background: #666;
+    color: white;
+}
+
+.social-menu i {
+  color: white;
+  margin-right:5px;
+}
   header {
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), rgba(255,255,255,0.7) url('img/feet.png') center center;
+    background: linear-gradient(rgba(153, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), rgba(0,0,0,0.7) url('img/Track.jpg') center bottom;
     background-size: cover;
     height:225px;
     display:block;
@@ -50,10 +64,26 @@ nav li a {
 
   }
 
-  .pre-hero h5 {
-    font-size:2em;
-    font-weight:bold;
-    color: #333;
+
+  header h5 {
+    display:block;
+    line-height: 1.5em;
+    /*font-weight: bold;*/
+    color: #fafafa;
+    font-size: 3em;
+    padding:10px 5%;
+  }
+
+  li h4 {
+    font-size:1.5rem;
+  }
+
+  .collapsible-header {
+    padding: 10px;
+  }
+
+  .collapsible-body {
+    padding: 1.5rem;
   }
 
 footer {
