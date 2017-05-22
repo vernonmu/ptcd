@@ -17,18 +17,21 @@ body {
   }
 
 nav {
-  background: transparent;
-  box-shadow: none !important;
+  background: white;
+  /*box-shadow: none !important;*/
 }
 
 .nav-wrapper, i, a.brand-logo {
   color: #333;
+}
 
+a.brand-logo {
+  padding-top:5px;
 }
 nav li a {
   color: #333;
   font-weight:500;
-  font-size:14pt;
+  /*font-size:14pt;*/
   text-transform: uppercase;
 }
 
