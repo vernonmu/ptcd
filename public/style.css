@@ -25,6 +25,9 @@ nav {
   color: #333;
 }
 
+footer a {
+  color: white;
+}
 .schedule-title {
   font-size:1.25em;
   /*font-size:bold;*/
