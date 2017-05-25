@@ -12,7 +12,9 @@ angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
  $scope.getCalendar = function() {
    mainSrv.getCalendar()
    .then(function(response) {
-     return console.log(response);
+     console.log(response);
+     $scope.events = response
+     return response;
    })
  }
 
