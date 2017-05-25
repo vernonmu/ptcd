@@ -25,7 +25,7 @@ app.get('/ptcd/cal', (req,res,next) => {
     // console.log(response.data.items.forEach(val => {
       console.log(response.data);
       // val.start.date = moment(val.start.dateTime).format("dddd, MMMM Do, h:mm")
-    }));
+
     res.status(200).json(response.data)
   })
   .catch( error => {
