@@ -10,7 +10,11 @@
             </div>
         </div>
         <div class="col m4 s12">
+
             <ul class="collapsible" data-collapsible="accordion" style="background-color:white;">
+                <li ng-repeat="event in $scope.getCalendar">
+                  {{event}}
+                </li>
                 <li class="collection-header" style="border-bottom: 1px solid #ccc;text-transform:uppercase;">
                     <h4 class="center-align">Team Schedule</h4></li>
                 <li>

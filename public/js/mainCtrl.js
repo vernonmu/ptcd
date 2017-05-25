@@ -7,4 +7,16 @@ angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
      draggable: true // Choose whether you can drag to open on touch screens
    }
  );
+
+
+ $scope.getCalendar = function() {
+   mainSrv.getCalendar()
+   .then(function(response) {
+     return console.log(response);
+   })
+ }
+
+ $scope.getCalendar()
+
+
 })
