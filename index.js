@@ -7,6 +7,8 @@ const fs = require('fs')
 const readline = require('readline')
 const googleAuth = require('google-auth-library')
 require('dotenv').config()
+const google = require('googleapis');
+const OAuth2 = google.auth.OAuth2;
 
 const db = require('./db.js')
 
@@ -17,8 +19,8 @@ app.use(cors())
 
 app.use(express.static(__dirname + '/public'))
 
-var google = require('googleapis');
-var OAuth2 = google.auth.OAuth2;
+
+
 
 var oauth2Client = new OAuth2(
   process.env.CLIENT_ID,
