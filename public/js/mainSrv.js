@@ -9,9 +9,9 @@ angular.module('app').service('mainSrv', function($http){
       for (var i = items.length-1; i > items.length-5; i--) {
         console.log(items[i]);
 
-        let d = items[i].start.dateTime
+        // let d = items[i].start.dateTime
 
-        console.log(d.getMonth);
+        // console.log(d.getMonth);
 
 
         // items[i].date = d.getDate()
