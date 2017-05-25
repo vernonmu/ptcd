@@ -15,8 +15,8 @@
 
                 <li class="collection-header" style="border-bottom: 1px solid #ccc;text-transform:uppercase;">
                     <h4 class="center-align">Team Schedule</h4></li>
-                    <li ng-repeat="event in $scope.events">
-                      test {{$scope.events}}
+                    <li ng-repeat="event in events">
+                      test {{event.start.date.toLocaleDate()}}
                     </li>
                 <li>
                     <div class="collapsible-header">Thursday, May 25<br><span class="schedule-title">Meet at NCAA West Regionals</span></div>
