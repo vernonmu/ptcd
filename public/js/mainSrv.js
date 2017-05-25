@@ -13,7 +13,3 @@ angular.module('app').service('mainSrv', function($http){
     })
   }
 })
-
-// TODO: filter response.data.items by date. if older than 1 year, omit. or show upcoming, disregard old items?
-// ng repeat 5 events upcoming.
-// show events on google calendar view on Schedule page with bigCal npm package
