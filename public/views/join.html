@@ -3,52 +3,183 @@
     <div class="col s12 card">
       <div class="card-content">
         <h1>Join</h1>
-        <p class="flow-text">To begin the registration process, complete the form below. We will send you the application corresponding to the details submitted.</p>
-
-
+        <p class="flow-text">To register your athlete, complete the form below.</p>
         <div class="row">
-    <form class="col s12" id="reg-form">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" required>
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" required>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate" required>
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate" minlength="6" required>
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <div class="gender-male">
-            <input class="with-gap" name="gender" type="radio" id="male" required />
-            <label for="male">Male</label>
-          </div>
-          <div class="gender-female">
-            <input class="with-gap" name="gender" type="radio" id="female" required />
-            <label for="female">Female</label>
-          </div>
-        </div>
+          <form class="col s12" id="reg-form">
+            <div class="row">
+              <h5>Athlete's Info</h5>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">Athlete's First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" required>
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input input-date
+                    type="text"
+                    name="created"
+                    id="inputCreated"
+                    ng-model="currentTime"
+                    container=""
+                    format="dd/mm/yyyy"
+                    months-full="{{ month }}"
+                    months-short="{{ monthShort }}"
+                    weekdays-full="{{ weekdaysFull }}"
+                    weekdays-short="{{ weekdaysShort }}"
+                    weekdays-letter="{{ weekdaysLetter }}"
+                    disable="disable"
+                    min="{{ minDate }}"
+                    max="{{ maxDate }}"
+                    today="today"
+                    first-day="1"
+                    clear="clear"
+                    close="close"
+                    select-years="15"
+                    on-start="onStart()"
+                    on-render="onRender()"
+                    on-open="onOpen()"
+                    on-close="onClose()"
+                    on-set="onSet()"
+                    on-stop="onStop()" />
+                    <label for="inputCreated">Date of Birth</label>
+              </div>
+              <div class="input-field col s6">
+                <div class="gender-male">
+                  <input class="with-gap" name="gender" type="radio" id="male" required />
+                  <label for="male">Male</label>
+                </div>
+                <div class="gender-female">
+                  <input class="with-gap" name="gender" type="radio" id="female" required />
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="validate" required>
+                <label for="">Current School</label>
+              </div>
+            </div>
+            <div class="row">
+              <h5>Your Info</h5>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">Parent First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" required>
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" class="validate" required>
+                <label>Street Address</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input type="text" class="validate" required>
+                <label>City</label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="validate" required>
+                <label>Zip</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m6 s12" input-field>
+                <select class="" ng-model="select.value1" material-select watch>
+                    <option ng-repeat="value in select.choices">{{value}}</option>
+                </select>
+                <label for="last_name">Your Role</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m6 s12" input-field>
+                <input type="text" required>
+                <label>Best Phone</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col m6 s12">
+                <input id="email" type="email" class="validate" required>
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <h5>Emergency Contact #1</h5>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="">Relationship</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">Phone</label>
+              </div>
+            </div>
+            <div class="row">
+              <h5>Emergency Contact #2</h5>
 
-        <div class="input-field col s6">
-          <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
-            <i class="material-icons right">done</i>
-          </button>
-        </div>
-      </div>
-    </form>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="">Relationship</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required>
+                <label for="first_name">Phone</label>
+              </div>
+            </div>
+            <div class="row">
+
+              <input-field class="col s12">
+                  <textarea ng-model="dummyInputs.textAreaInput" class="materialize-textarea"></textarea>
+                  <label>List any medications your child is taking or health concerns we should know about</label>
+              </input-field>
+            </div>
+            <div class="row">
+              <h5>Emergency Medical Treatment</h5>
+              <p>Please indicate how you wish for us to respond to your child's needs, in the rare event of a medical emergecy.</p>
+              <div class="col s12" input-field>
+                <select class="" ng-model="select.value1" material-select watch>
+                    <option ng-repeat="value in emergency.choices">{{value}}</option>
+                </select>
+                <label for="last_name">If my child needs medical attention, please:</label>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <button class="btn blue btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                  <i class="material-icons right">done</i>
+                </button>
+              </div>
+            </div>
+          </form>
   </div>
 
       </div>

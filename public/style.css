@@ -15,6 +15,11 @@ body {
 
 .side-nav li>a {
   height:70px;
+  text-align: center;
+}
+
+.side-nav img {
+  margin-bottom:30px;
 }
   .main {
     flex: 1 0 auto;
@@ -58,9 +63,23 @@ nav li a {
   text-transform: uppercase;
 }
 
+form h5 {
+  padding-left:10px;
+  margin-top:50px;
+}
+
+form p {
+  padding-left:10px;
+  padding-bottom:25px;
+}
+
 .page-footer {
-    background: #11202A;
+    background: #19303f;
   }
+
+.select-wrapper+label {
+  font-size: 1rem;
+}
 
 .chip:hover {
     background: #666;
