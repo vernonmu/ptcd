@@ -16,6 +16,11 @@ body {
     line-height:1.6em;
   }
 
+  .collapsible .collapsible-body {
+    padding:10px;
+    text-align: center;
+  }
+
 nav {
   background: white;
 

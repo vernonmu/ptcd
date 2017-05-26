@@ -29,8 +29,8 @@ app.get('/ptcd/cal', (req,res,next) => {
         // val.date = moment(response.data.items[idx].start, "YYYY-MM-DD")
         // console.log(val.start.dateTime);
         if (val.start) {
-          val.date = moment(val.start.dateTime).format('dddd, MMMM DD')
-          console.log(val.date);
+          val.date = moment(val.start.dateTime).format('dddd, MMMM DD, YYYY')
+          // console.log(val.date);
         }
       })
 
