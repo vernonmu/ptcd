@@ -22,23 +22,12 @@ app.use(express.static(__dirname + '/public'))
 app.get('/ptcd/cal', (req,res,next) => {
   axios.get(`https://www.googleapis.com/calendar/v3/calendars/${process.env.calendarid}/events?key=${process.env.mykey}`)
   .then((response) => {
-        // console.log(response.data.items);
-      // console.log(response.data.items[0].start.dateTime);
-
       let items = response.data.items.map( (val, idx) => {
-        // val.date = moment(response.data.items[idx].start, "YYYY-MM-DD")
-        // console.log(val.start.dateTime);
         if (val.start) {
           val.date = moment(val.start.dateTime).format('dddd, MMMM DD, YYYY')
           // console.log(val.date);
         }
       })
-
-
-      // console.log(items.date);
-
-      // val.start.date = moment(val.start.dateTime).format("dddd, MMMM Do, h:mm")
-
     res.status(200).json(response.data)
   })
   .catch( error => {
@@ -46,6 +35,9 @@ app.get('/ptcd/cal', (req,res,next) => {
   })
 })
 
+app.post('/ptcd/', (req,res,next) => {
+  console.log(req.body);
+})
 
 
 const port = 2224

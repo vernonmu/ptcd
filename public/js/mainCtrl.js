@@ -37,5 +37,12 @@ angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
 
  $scope.getCalendar()
 
+ $scope.createAthlete = function(athlete) {
+   mainSrv.createAthlete(athlete).then(function(response) {
+     console.log(response);
+     return response;
+   })
+ }
+
 
 })

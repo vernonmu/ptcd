@@ -9,11 +9,11 @@
             <div class="row">
               <h5>Athlete's Info</h5>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.athlete_first">
                 <label for="first_name">Athlete's First Name</label>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.athlete_last">
                 <label for="last_name">Last Name</label>
               </div>
             </div>
@@ -23,7 +23,7 @@
                     type="text"
                     name="created"
                     id="inputCreated"
-                    ng-model="currentTime"
+                    ng-model="athlete.dob"
                     container=""
                     format="dd/mm/yyyy"
                     months-full="{{ month }}"
@@ -49,51 +49,51 @@
               </div>
               <div class="input-field col s6">
                 <div class="gender-male">
-                  <input class="with-gap" name="gender" type="radio" id="male" required />
+                  <input class="with-gap" name="gender" type="radio"  ng-model="athlete.male"/>
                   <label for="male">Male</label>
                 </div>
                 <div class="gender-female">
-                  <input class="with-gap" name="gender" type="radio" id="female" required />
+                  <input class="with-gap" name="gender" type="radio"  ng-model="athlete.female"/>
                   <label for="female">Female</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.school" />
                 <label for="">Current School</label>
               </div>
             </div>
             <div class="row">
               <h5>Your Info</h5>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.parent_first" />
                 <label for="first_name">Parent First Name</label>
               </div>
               <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.parent_last" />
                 <label for="last_name">Last Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <input type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.street" />
                 <label>Street Address</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.city" />
                 <label>City</label>
               </div>
               <div class="input-field col s6">
-                <input type="text" class="validate" required>
+                <input type="text" class="validate"  ng-model="athlete.zip" />
                 <label>Zip</label>
               </div>
             </div>
             <div class="row">
               <div class="col m6 s12" input-field>
-                <select class="" ng-model="select.value1" material-select watch>
+                <select class="" ng-model="athlete.role" material-select watch>
                     <option ng-repeat="value in select.choices">{{value}}</option>
                 </select>
                 <label for="last_name">Your Role</label>
@@ -101,63 +101,61 @@
             </div>
             <div class="row">
               <div class="col m6 s12" input-field>
-                <input type="text" required>
+                <input type="text" >
                 <label>Best Phone</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col m6 s12">
-                <input id="email" type="email" class="validate" required>
+                <input id="email" type="email" class="validate"  ng-model="athlete.email" />
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <h5>Emergency Contact #1</h5>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_one_first" />
                 <label for="first_name">First Name</label>
               </div>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_one_last" />
                 <label for="last_name">Last Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_one_relationship" />
                 <label for="">Relationship</label>
               </div>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_one_phone" />
                 <label for="first_name">Phone</label>
               </div>
             </div>
             <div class="row">
               <h5>Emergency Contact #2</h5>
-
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_two_first" />
                 <label for="first_name">First Name</label>
               </div>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_two_last" />
                 <label for="last_name">Last Name</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_two_relationship" />
                 <label for="">Relationship</label>
               </div>
               <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" required>
+                <input id="first_name" type="text" class="validate"  ng-model="athlete.emergency_two_phone" />
                 <label for="first_name">Phone</label>
               </div>
             </div>
             <div class="row">
-
               <input-field class="col s12">
-                  <textarea ng-model="dummyInputs.textAreaInput" class="materialize-textarea"></textarea>
+                  <textarea ng-model="athlete.medications" class="materialize-textarea"></textarea>
                   <label>List any medications your child is taking or health concerns we should know about</label>
               </input-field>
             </div>
@@ -165,7 +163,7 @@
               <h5>Emergency Medical Treatment</h5>
               <p>Please indicate how you wish for us to respond to your child's needs, in the rare event of a medical emergecy.</p>
               <div class="col s12" input-field>
-                <select class="" ng-model="select.value1" material-select watch>
+                <select class="" ng-model="athlete.emergency_choice" material-select watch>
                     <option ng-repeat="value in emergency.choices">{{value}}</option>
                 </select>
                 <label for="last_name">If my child needs medical attention, please:</label>
@@ -174,7 +172,7 @@
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <button class="btn blue btn-large btn-register waves-effect waves-light" type="submit" name="action">Register
+                <button class="btn blue btn-large btn-register waves-effect waves-light" type="submit" ng-click="createAthlete(athlete)">Register
                   <i class="material-icons right">done</i>
                 </button>
               </div>
