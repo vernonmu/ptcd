@@ -30,5 +30,9 @@ angular.module('app', ['ui.router', 'ui.materialize'])
     templateUrl: './views/schedule.html',
     url: '/schedule'
   })
+  .state('donate', {
+    templateUrl: './views/donate.html',
+    url: '/donate'
+  })
   $urlRouterProvider.otherwise('/')
 })
