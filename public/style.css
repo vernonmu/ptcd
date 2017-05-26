@@ -5,7 +5,17 @@ body {
     background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), rgba(255,255,255,0.6) url('img/1511-large.jpg');
     background-size: cover;
   }
+.btn-large i {
+  color: white;
+}
 
+#mobile-demo {
+  padding-top:100px;
+}
+
+.side-nav li>a {
+  height:70px;
+}
   .main {
     flex: 1 0 auto;
     padding-top:5%;
