@@ -49,7 +49,7 @@ nav li a {
 }
 
 .page-footer {
-    background: #990000;
+    background: #11202A;
   }
 
 .chip:hover {
@@ -62,7 +62,7 @@ nav li a {
   margin-right:5px;
 }
   header {
-    background: linear-gradient(rgba(153, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), rgba(0,0,0,0.7) url('img/Track.jpg') center bottom;
+    background: linear-gradient(rgba(86, 160, 211, 0.7), rgba(0, 0, 0, 0.7)), rgba(0,0,0,0.7) url('img/Track.jpg') center bottom;
     background-size: cover;
     height:225px;
     display:block;
