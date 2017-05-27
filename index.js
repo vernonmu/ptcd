@@ -40,38 +40,49 @@ app.post('/ptcd/', (req,res,next) => {
   console.log(req.body.gender);
   let date = Date.now()
 
-
-
   db.createAthlete([
-  req.body.athlete_first,
-  req.body.athlete_last,
-  req.body.dob,
-  req.body.gender,
-  req.body.school,
-  req.body.parent_first,
-  req.body.parent_last,
-  req.body.street,
-  req.body.city,
-  req.body.zip,
-  req.body.role,
-  req.body.telephone,
-  req.body.email,
-  req.body.emergency_one_first, req.body.emergency_one_last, req.body.emergency_one_relationship,
-  req.body.emergency_one_phone,
-  req.body.emergency_two_first,
-  req.body.emergency_two_last,
-  req.body.emergency_two_relationship,
-  req.body.emergency_two_phone,
-  req.body.medications,
-  req.body.emergency_choice,
-  date], (err, data) => {
-    if (err) {next(err)}
-    return res.status(200).json(data)
+    req.body.athlete_first,
+    req.body.athlete_last,
+    req.body.dob,
+    req.body.gender,
+    req.body.school,
+    req.body.parent_first,
+    req.body.parent_last,
+    req.body.street,
+    req.body.city,
+    req.body.zip,
+    req.body.role,
+    req.body.telephone,
+    req.body.email,
+    req.body.emergency_one_first, req.body.emergency_one_last, req.body.emergency_one_relationship,
+    req.body.emergency_one_phone,
+    req.body.emergency_two_first,
+    req.body.emergency_two_last,
+    req.body.emergency_two_relationship,
+    req.body.emergency_two_phone,
+    req.body.medications,
+    req.body.emergency_choice,
+    date], (err, data) => {
+      if (err) {next(err)}
+      return res.status(200).json(data)
   })
-
-
 })
 
+app.post('/ptcd/message', (req,res,next) => {
+  console.log(req.body);
+  let tempDate = Date.now()
+  let date = moment(tempDate).format('dddd, MMMM DD, YYYY h:mm:ss')
+
+  db.createMessage([
+    req.body.first_name,
+    req.body.last_name,
+    req.body.message,
+    date
+  ], (err, message) => {
+    if (err) {next(err)}
+    else {return res.status(200).json(message)}
+  })
+})
 
 const port = 2224
 

@@ -1,4 +1,4 @@
-angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
+angular.module('app').controller('mainCtrl', function($scope, $timeout, mainSrv) {
   console.log('controlling');
   $('.button-collapse').sideNav({
      menuWidth: 300, // Default is 300
@@ -44,6 +44,17 @@ angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
      console.log(response);
      return response;
    })
+ }
+
+ $scope.sendMessage = function(message) {
+   mainSrv.sendMessage(message)
+   message.first_name = ''
+   message.last_name = ''
+   message.message = ''
+   $scope.alert = 'Thank you! Your message has been sent.'
+   $timeout(function() {
+   $scope.alert = '';
+   }, 3000);
  }
 
 

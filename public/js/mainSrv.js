@@ -20,4 +20,11 @@ angular.module('app').service('mainSrv', function($http){
       return response
     })
   }
+
+  this.sendMessage = function(message) {
+    return $http.post('/ptcd/message', message)
+    .then(function(response){
+      console.log(response);
+    })
+  }
 })

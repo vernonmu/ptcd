@@ -13,6 +13,17 @@ body {
   padding-top:100px;
 }
 
+#alert {
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  background-color: #DFF0D8;
+  margin-left:10px;
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
 .side-nav li>a {
   height:70px;
   text-align: center;
