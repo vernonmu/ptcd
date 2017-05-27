@@ -37,6 +37,39 @@ app.get('/ptcd/cal', (req,res,next) => {
 
 app.post('/ptcd/', (req,res,next) => {
   console.log(req.body);
+  console.log(req.body.gender);
+  let date = Date.now()
+
+
+
+  db.createAthlete([
+  req.body.athlete_first,
+  req.body.athlete_last,
+  req.body.dob,
+  req.body.gender,
+  req.body.school,
+  req.body.parent_first,
+  req.body.parent_last,
+  req.body.street,
+  req.body.city,
+  req.body.zip,
+  req.body.role,
+  req.body.telephone,
+  req.body.email,
+  req.body.emergency_one_first, req.body.emergency_one_last, req.body.emergency_one_relationship,
+  req.body.emergency_one_phone,
+  req.body.emergency_two_first,
+  req.body.emergency_two_last,
+  req.body.emergency_two_relationship,
+  req.body.emergency_two_phone,
+  req.body.medications,
+  req.body.emergency_choice,
+  date], (err, data) => {
+    if (err) {next(err)}
+    return res.status(200).json(data)
+  })
+
+
 })
 
 

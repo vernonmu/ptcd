@@ -24,7 +24,9 @@ angular.module('app').controller('mainCtrl', function($scope, mainSrv) {
     'option 1',
     'option 2']
   $scope.select = {choices: ['Mother', 'Father', 'Guardian']}
+  $scope.gender = {choices: ['male', 'female']}
   $scope.emergency = {choices: ['start treatment immediately', 'I wish to be contacted prior to any medical procedures']}
+
 
  $scope.getCalendar = function() {
    mainSrv.getCalendar()
