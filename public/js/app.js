@@ -14,10 +14,10 @@ angular.module('app', ['ui.router', 'ui.materialize'])
     templateUrl: './views/join.html',
     url: '/join'
   })
-  .state('spirit', {
-    templateUrl: './views/spirit.html',
-    url: '/spirit'
-  })
+  // .state('spirit', {
+  //   templateUrl: './views/spirit.html',
+  //   url: '/spirit'
+  // })
   .state('login', {
     templateUrl: './views/login.html',
     url: '/login'
