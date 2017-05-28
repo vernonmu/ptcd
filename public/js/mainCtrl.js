@@ -41,6 +41,30 @@ angular.module('app').controller('mainCtrl', function($scope, $timeout, mainSrv)
 
  $scope.createAthlete = function(athlete) {
    mainSrv.createAthlete(athlete).then(function(response) {
+     athlete.athlete_first = ''
+     athlete.athlete_last = ''
+     athlete.dob = ''
+     athlete.gender = ''
+     athlete.school = ''
+     athlete.parent_first = ''
+     athlete.parent_last = ''
+     athlete.street =''
+     athlete.city = ''
+     athlete.zip =''
+     athlete.role = ''
+     athlete.telephone = ''
+     athlete.email = ''
+     athlete.emergency_one_first = ''
+     athlete.emergency_one_last = ''
+     athlete.emergency_one_relationship = ''
+     athlete.emergency_one_phone = ''
+     athlete.emergency_two_first = ''
+     athlete.emergency_two_last = ''
+     athlete.emergency_two_relationship = ''
+     athlete.emergency_two_phone = ''
+     athlete.medications = ''
+     athlete.emergency_choice = ''
+
      console.log(response);
      return response;
    })
