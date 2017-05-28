@@ -40,7 +40,8 @@ angular.module('app').controller('mainCtrl', function($scope, $timeout, mainSrv)
  $scope.getCalendar()
 
  $scope.createAthlete = function(athlete) {
-   mainSrv.createAthlete(athlete).then(function(response) {
+   mainSrv.createAthlete(athlete)
+   .then(function(response) {
      athlete.athlete_first = ''
      athlete.athlete_last = ''
      athlete.dob = ''
@@ -65,6 +66,11 @@ angular.module('app').controller('mainCtrl', function($scope, $timeout, mainSrv)
      athlete.medications = ''
      athlete.emergency_choice = ''
 
+     $scope.alert = 'Thank you! Your application has been sent.'
+     $timeout(function() {
+     $scope.alert = '';
+     }, 3000);
+
      console.log(response);
      return response;
    })
@@ -80,6 +86,33 @@ angular.module('app').controller('mainCtrl', function($scope, $timeout, mainSrv)
    $scope.alert = '';
    }, 3000);
  }
+
+ // Create a Stripe client
+var stripe = Stripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+
+// Create an instance of Elements
+var elements = stripe.elements();
+
+// Custom styling can be passed to options when creating an Element.
+// (Note that this demo uses a wider set of styles than the guide below.)
+var style = {
+  base: {
+    color: '#32325d',
+    lineHeight: '24px',
+    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '16px',
+    '::placeholder': {
+      color: '#aab7c4'
+    }
+  },
+  invalid: {
+    color: '#fa755a',
+    iconColor: '#fa755a'
+  }
+};
+
+
 
 
 })
